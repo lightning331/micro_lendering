@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { store, history} from './store';
+import { store, history} from './reducers/store';
 import { Route, Switch} from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
 

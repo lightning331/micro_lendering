@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './App.css';
-import Register from './components/LoginRegister/Register';
-import OTPCode from './components/LoginRegister/OTPCode';
+import Register from './components/LoginRegister/SignUp/SignUp';
+import OTPCode from './components/LoginRegister/SignUp/OTPCodeVerify';
+import MakePassword from './components/LoginRegister/SignUp/MakePassword';
+import Login from './components/LoginRegister/Login/Login'
 
 class App extends Component {
   render() {
@@ -11,25 +12,10 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Register}/>
           <Route path="/otpcode" component={OTPCode}/>
+          <Route path="/createpassword" component={MakePassword}/>
+          <Route path="/login" component={Login}/>
         </Switch>
       </BrowserRouter>
-      
-      // <div className="App">
-      //   <header className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <p>
-      //       Edit <code>src/App.js</code> and save to reload.
-      //     </p>
-      //     <a
-      //       className="App-link"
-      //       href="https://reactjs.org"
-      //       target="_blank"
-      //       rel="noopener noreferrer"
-      //     >
-      //       Learn React
-      //     </a>
-      //   </header>
-      // </div>
     );
   }
 }

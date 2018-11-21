@@ -1,11 +1,11 @@
-import agent from './API';
+import agent from '../API';
 import {
   ASYNC_START,
   ASYNC_END,
   LOGIN,
   LOGOUT,
   REGISTER
-} from './constants/actionTypes';
+} from '../constants/actionTypes';
 
 const promiseMiddleware = store => next => action => {
   if (isPromise(action.payload)) {
